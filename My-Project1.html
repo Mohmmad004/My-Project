@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     * { box-sizing: border-box; }
+    body {
+    margin: 0; padding: 32px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+    color: #e8ebff;
+    background: #0f1226;
+    }
+    h1{
+        margin: 0 0 8px;
+        font-size: 32px;
+    }
+    p{        
+        margin: 0 0 8px;
+        color: #b9c0ff;
+    }
+    .demo1 h2{
+        font-size: 20px;
+        margin: 0 0 8px;
+    }
+    .card{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(640px,1fr));
+        gap: 1rem;
+        
+    }
+    .demo1 p { 
+    margin: 0 0 14px; 
+    color: #b9c0ff; 
+    font-size: 14px;
+}
+    .demo1
+{
+    background-image: linear-gradient(180deg,#1b1f42, #131634);
+    padding:1rem;
+    border: 2px solid #2a2f64;
+    border-radius: 1.2rem;
+    position: relative;
+}
+.badge{
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 0 0 8px;
+    font-size: 12px;
+    background-color: #12153a;
+    color: #cbd4ff;
+    border: 1px solid #2a2f64;
+    border-radius: 16px;
+    
+}
+.stage{
+    border-radius: 14px;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16/10;
+    border: 1px solid #2a2f64;
+    background: #0b0e23;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+.koko{
+    width: 90%;
+    height: 90%;
+    -webkit-mask-image: radial-gradient(circle at 50%,rgb(0,0,0,1)45%,rgb(0,0,0,0)60%);
+    -webkit-mask-repeat: no-repeat;
+}
+.caption{
+    position: absolute;
+    background-color: black;
+    color: #fffffccc;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: .5rem;
+    right: 8px; bottom: 8px;
+    
+}
+.bg-photo{
+    background-image: url(Images/A5.jpg);
+    background-size: cover;
+}
+.mask{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0,0,0,1) 0 16px,
+    rgba(0,0,0,0) 18px
+    );
+    
+
+    -webkit-mask-size: 80px 80px;
+   
+    
+    
+
+}
+.bg-photo1{
+    background-image: url(Images/A5.jpg);
+    background-size: cover;
+}
+.bg-photo1:hover{
+     -webkit-mask-size: 60px 60px;
+   
+    -webkit-mask-position: 0 0;
+   
+}
+.fade{
+    width: 100%;
+    height: 100%;
+   
+}
+.bg-photo2{
+    background-image: url(Images/A5.jpg);
+    background-size: cover;
+    -webkit-mask-image:  linear-gradient(
+        to bottom,
+        rgb(0,0,0,1)70%,
+        rgb(0,0,0,0)100%
+
+    );
+  
+}
+.text{
+   width: 100%;
+   height: 100%;
+    background: #0c1030;
+    display: grid;
+    justify-content: center;
+    align-items: center;   
+   
+}
+.bg-photo4{  font-weight: 800;
+    font-size: clamp(32px, 20vw, 100px);
+    text-transform: uppercase;
+    background-image: url('images/A5.jpg');
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.bg-photo5{ 
+    font-weight: 900;
+    font-size: clamp(32px, 20vw, 160px);
+    text-transform: uppercase;
+    background-image: url('images/A5.jpg');
+    background-size: contain;
+    
+    background-position: left center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: background-position 800ms ease;
+
+}
+.text:hover .bg-photo5{
+    background-position: right center;}
+    
+
+    </style>
+</head>
+<body>
+    
+    <h1>CSS Masking – Real Photo Examples 🎭</h1>
+    <p>All demos use Unsplash photographs so you can see real masking effects in action.</p>
+<div class="card">
+<section class="demo1">
+    <span class="badge">Demo 1</span>
+    <h2>Basic mask-image</h2>
+    <p>Shows only a circular center.</p>
+    <div class="stage">
+        <div class="koko bg-photo"></div>
+        <div class="caption">Radial mask</div>
+    </div>
+</section>
+
+
+<section class="demo1">
+    <span class="badge">Demo 2</span>
+    <h2>Mask size + position + repeat</h2>
+    <p>Creates a dotted stencil. Hover to change size/position.</p>
+    <div class="stage">
+        <div class="mask bg-photo1"></div>
+        <div class="caption">Hover for effect</div>
+    </div>
+</section>
+
+
+<section class="demo1">
+    <span class="badge">Demo 3</span>
+    <h2>Linear gradient fade</h2>
+    <p>Fades image into background.</p>
+    <div class="stage">
+        <div class="fade bg-photo2"></div>
+        <div class="caption">Top → bottom fade</div>
+    </div>
+</section>
+
+
+<section class="demo1">
+    <span class="badge">Demo 4</span>
+    <h2>Mask text with photo</h2>
+    <p>Photo fills the letters.</p>
+    <div class="stage">
+        <div class="text">
+        <div class="bg-photo4"> Mohammad</div>
+        </div>
+    </div>
+</section>
+
+<section class="demo1">
+    <span class="badge">Demo 4</span>
+    <h2>Mask text with photo</h2>
+    <p>Photo fills the letters.</p>
+    <div class="stage">
+        <div class="text">
+        <div class="bg-photo5"> Mohammad</div>
+        </div>
+    </div>
+</section>
+
+
+
+</div>
+</body>
+</html>
