@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -388,4 +389,396 @@
 </div>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --bg:#0b1220;
+            --text:#0f172a;
+            --muted:#9aa3b2;
+            --line:#1f2a44;
+            --card:#0f172a;
+            --link:#fB923C;
+            --side:#075e5e;
+            --side-text:#c9f3f5;
+        }
+
+        body {
+            margin: 0;
+            font: 16px / 1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            color: var(--ink);
+            background: var(--bg);
+        }
+        .wrap{
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid{
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 28px;
+
+        }
+
+        
+        .side-bar{
+            position: sticky;
+            top: 20px;
+            align-self: start;
+            background-color: var(--side);
+            border-radius: 18px;
+            color: var(--side-text);
+            padding: 28px 28px 20px;
+            overflow: hidden;
+            
+        }
+        .header{
+            display: grid;
+            grid-template-columns: 96px 1fr;
+            gap: 20px;
+            align-items: center;
+            
+        }
+        
+        .avatar{
+            width: 96px;
+            height: 96px;
+        }
+        .avatar img{
+            width: 91.2px;
+            height: 91.2px;
+            border: 2px solid #C9F3F5;
+            border-radius: 50%;
+        
+        }
+        .information h2{
+            font-size: clamp(22px,4vw,28px);
+            margin: 0;
+
+        }
+        .information p{
+            opacity: .9;
+            margin: .3rem 0 0;
+        }
+        .body-side{
+            margin-top: 3rem;
+            display: grid; 
+            gap: 20px; 
+        }
+        .box{
+            background: color-mix(in srgb, #c9f3f5 8%, #0000);
+            border:1px solid #c9f3f550;
+            border-radius: 15px;
+            padding: 14px;
+            display: grid;
+            gap: 5px;
+
+        }
+        .link{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 18px;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        .link a{
+            
+            font-size: 14px;
+            color: var(--link);
+            text-decoration: none;
+
+        }
+        .link a:hover{
+            text-decoration: underline;
+        }
+        .icon  {
+            width: 18px; 
+            height: 18px; 
+            flex: none;
+            margin-right: 5px;
+        }
+        .card { 
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .badge{
+            font-size: 12px;
+            padding: 4px 10px;
+            margin: 0 8px 8px 0;
+            border: 1px solid #c9f3f5;
+            border-radius: 20px;
+            background: color-mix(in srgb,#c9f3f5 15%, #0000);
+        }
+
+
+        .resume{    
+            background: color-mix(in srgb, var(--card) 90%, #fff0 10%);
+            border: 1px solid #1f2a44;
+            border-radius: 16px;
+            color: #ffffff;
+            padding: 28px;
+        }
+        .resume h1{
+            font-size: clamp(28px,8vw,40px);
+            margin: 0 0 6px;
+        }
+        .resume p{
+            color:var(--muted);
+            margin: 0;
+        }
+        .item3{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+        .item{
+            background: color-mix(in srgb, var(--card) 90%, #fff0 10%);
+            border: 1px solid #1f2a44;
+            border-radius: 16px;
+            color: #ffffff;
+            padding: 18px;margin-top: 2rem;
+        }
+        .item h3{
+            color: var(--muted);
+            text-transform: uppercase;
+        }
+        .experience{ background: color-mix(in srgb, var(--card) 90%, #fff0 10%);
+            border: 1px solid #1f2a44;
+            border-radius: 16px;
+            color: #ffffff;
+            padding: 28px;
+            margin-top: 2rem;
+        }
+        .experience h1{
+            font-size: 24px;
+        }
+        .exp1{
+            position: relative;
+            color: #ffffff;
+            font-weight: 700;
+        }
+        .hint{
+            display: block;
+            color: var(--muted);
+            font-weight: 400;
+        }
+        .caption{
+            position: absolute;
+            right: 0;
+            top: 2px;
+            font-weight: 300;
+            color: var(--muted);
+        }
+        .bottom-border{
+            border-bottom: 1px dashed var(--line);
+            margin-bottom: 1rem;
+        }
+        
+            
+@media(max-width:900px){
+            .grid{
+                grid-template-columns:1fr;
+            }
+            
+
+        }
+        @media (max-width: 1000px) {
+            .item3
+                {
+        grid-template-columns: repeat(2, 1fr); 
+        } 
+        .side-bar {
+            position: static;
+        }  
+        }
+    @media (max-width: 640px)   { .side-bar {position: static;}}
+        
+        
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="grid">
+        <div class="side-bar">
+            <div class="header">
+                <div class="avatar">
+                    <img src="Images/A5.jpg" alt="">
+                </div>
+                <div class="information">
+                    <h2>MOHAMAD</h2>
+                    <p>Front-End Developer • UI Engineer</p>
+                </div>
+            </div>
+            <div class="body-side">
+                <div class="box">
+                    <strong>Contact</strong>
+                    <div class="link">
+                        <a href="mailto:ahmzaza1985@gmail.com">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5Z"></path>
+                            </svg>ahmzaza1985@gmail.com
+                                    
+                        </a>
+                    </div>
+                    <div class="link">
+                        <label for="">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.7 11.7 0 0 0 3.7.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 8a1 1 0 0 1 1-1h3.4a1 1 0 0 1 1 1 11.7 11.7 0 0 0 .6 3.7 1 1 0 0 1-.24 1Z"></path>
+                            </svg> 
+                            +962 79 004 5924
+                        </label>
+                    </div>
+                    <div class="link">
+                        <label for="">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"></path>
+                            </svg>
+                                Amman - Jordan
+                        </label>
+                    </div>
+                    
+                    <div class="link">
+                        <a href="https://github.com/mohammad004">
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.2a11.6 11.6 0 0 1 6.2 0c2.4-1.5 3.4-1.2 3.4-1.2.6 1.7.2 3 .1 3.3.8.9 1.2 2 1.2 3.3 0 4.6-2.7 5.6-5.3 5.9.4.4.7 1 .7 2v2.9c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"></path>
+                            </svg> github.com/mohammad004
+                                    
+                        </a>
+                    </div>
+                    <div class="link">
+                        <a target="_blank" href="https://facebook.com/moh16.m">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                                <path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"></path><path fill="#fff" d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z"></path>
+                            </svg>Mohammad Khasawneh
+                                    
+                        </a>
+                    </div>
+                </div>
+                <div class="box">
+                    <strong style="margin-bottom: 1rem;">Languages</strong>
+                    <div class="card">
+                        <span class="badge">Arabic (Native)</span>
+                        <span class="badge">English (Professional)</span>
+                    </div>
+                </div>
+                
+                <div class="box">
+                    <strong style="margin-bottom: 1rem;">Top Skills</strong>
+                    <div class="card">
+                        <span class="badge">Semantic HTML</span>
+                        <span class="badge">Modern CSS</span>
+                        <span class="badge">Accessibility</span>
+                        <span class="badge">Git & GitHub</span>
+                        <span class="badge">Figma</span>
+                        <span class="badge">C#</span>
+                        <span class="badge">SQL Server</span>
+                    
+                    </div>
+                </div>
+        </div>
+        
+    </div>
+    <div class="main">
+            <div class="resume">
+                <h1>Resume</h1>
+                <p>Impact-driven front-end developer specializing in accessible, fast UIs.</p>
+            </div>
+            
+            <div class="item3">
+                <div class="item">
+                    <h3>Highlights</h3>
+                    <ul>
+                        <li>Shipped 20+ responsive sites</li>
+                        <li>Perf budgets & Lighthouse 95+</li>
+                        <li>Mentored 5 juniors</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Tooling</h3>
+                    <span>Vite, ESLint, Prettier, Playwright basics, Storybook.</span>
+                </div>
+                <div class="item">
+                    <h3>Focus</h3>
+                    <span>Design systems, design tokens, CSS architecture, a11y.</span>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="bottom-border">
+                    <h1>Experience</h1>
+                    <div class="exp1"><span>Senior Front-End Developer</span>
+                        <span class="hint">Tech Co • Amman</span>
+                        <div class="caption">2023 — Present</div>
+                    </div> 
+                    <ul>
+                        <li>Built component library; reduced CSS by 30% using tokens.</li>
+                        <li>Led accessibility drive to AA; created lint rules & docs.</li>
+                    </ul>
+                </div>
+                
+                <div class="exp1"><span>Web Designer</span>
+                    <span class="hint">Creative Studio • Remote</span>
+                    <div class="caption">2020 — 2023</div>
+                </div> 
+                <ul>
+                    <li>Prototyped 12 marketing sites; built a mini design system.</li>
+                    <li>Handed off clean, semantic HTML/CSS to dev teams.</li>
+                </ul>
+
+                </div>
+            <div class="experience">
+                <div class="bottom-border">
+                    <h1>Selected Projects</h1>
+                    <div class="exp1"><span>Portfolio Website</span>
+                        <span class="hint">Personal</span>
+                        <div class="caption">2024</div>
+                    </div> 
+                    <ul>
+                        <li>Static site scoring 95+ on Lighthouse Performance.</li>
+                        <li>CI/CD previews on each PR; automated checks.</li>
+                    </ul>
+                </div>
+                
+                <div class="exp1"><span>Design System Demo</span>
+                    <span class="hint">Open Source</span>
+                    <div class="caption">2023</div>
+                </div> 
+                <ul>
+                    <li>Token-based theming via CSS custom properties.</li>
+                    <li>Documented components; onboarded team in a week.</li>
+                </ul>
+                </div>
+                <div class="item3">
+                <div class="item">
+                    <h3>Education</h3>
+                    <p><strong>B.Sc. Computer Science</strong> University Name • 2016 — 2020</p>
+                    <ul>
+                        <li>Graduated with Honors</li>
+                        <li>Key courses: HCI, Data Structures</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Certifications</h3>
+                    <ul><li>Responsive Web Design — freeCodeCamp (2023)</li></ul>
+                </div>
+                <div class="item">
+                    <h3>Volunteer</h3>
+                    <span>Mentor, Local Coding Club (2022—Present). Weekly beginner sessions.</span>
+                </div>
+            </div>
+            </div>
+            
+            
+        </div>
+    
+</div>
+
+</body>
+>>>>>>> d8a6cdd35464785b5cc22760f18e019f2c3cf35a
 </html>
